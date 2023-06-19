@@ -5,38 +5,22 @@
 * followed by a new line
 * Return: Always 0 (Success)
 */
-int main(void) {
-    putchar('0');
-    putchar(',');
+int main(void) 
+{
+  int i;
 
-    putchar('1');
-    putchar(',');
+  for (i = 0; i < 10; i++)
+  {
+    putchar(i + '0');
 
-    putchar('2');
-    putchar(',');
+    if (i != 9)
+    {
+      putchar(',');
+      putchar(' ');
+    }
+  }
 
-    putchar('3');
-    putchar(',');
+  putchar('\n');
 
-    putchar('4');
-    putchar(',');
-
-    putchar('5');
-    putchar(',');
-
-    putchar('6');
-    putchar(',');
-
-    putchar('7');
-    putchar(',');
-
-    putchar('8');
-    putchar(',');
-
-    putchar('9');
-    putchar(' ');
-
-    putchar('\n');
-
-    return 0;
+  return 0;
 }
