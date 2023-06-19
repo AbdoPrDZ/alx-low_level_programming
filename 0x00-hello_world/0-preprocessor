@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE=${CFILE:-main.c}; gcc -E -o c "$CFILE"
+gcc $CFILE -E -o c
