@@ -27,7 +27,7 @@ int print_last_digit(int n) {
 
 	last_digit = _abs(n % 10);
 
-	_putchar(last_digit + '0'); // Convert the digit to character and print it
+	putchar(last_digit + '0'); // Convert the digit to character and print it
 
 	return last_digit;
 }
@@ -44,7 +44,7 @@ int main(void)
 	print_last_digit(98);
 	print_last_digit(0);
 	r = print_last_digit(-1024);
-	_putchar('0' + r);
-	_putchar('\n');
+	putchar('0' + r);
+	putchar('\n');
 	return (0);
 }
