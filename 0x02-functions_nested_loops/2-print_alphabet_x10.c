@@ -6,14 +6,14 @@
  */
 void print_alphabet(void)
 {
-    char letter = 'a';
-    
-    while (letter <= 'z') {
-        _putchar(letter);
-        letter++;
-    }
-    
-    _putchar('\n');
+	char letter = 'a';
+	
+	while (letter <= 'z') {
+		_putchar(letter);
+		letter++;
+	}
+	
+	_putchar('\n');
 }
 
 /**
@@ -21,9 +21,9 @@ void print_alphabet(void)
  */
 void print_alphabet_x10(void)
 {
-    for (int i = 0; i < 10; i++) {
-        print_alphabet()
-    }
+	for (int i = 0; i < 10; i++) {
+		print_alphabet()
+	}
 }
 
 /**
@@ -33,6 +33,6 @@ void print_alphabet_x10(void)
  */
 int main(void)
 {
-    print_alphabet_x10();
-    return (0);
+	print_alphabet_x10();
+	return (0);
 }

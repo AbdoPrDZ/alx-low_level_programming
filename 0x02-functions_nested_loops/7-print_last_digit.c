@@ -9,11 +9,11 @@
  */
 int _abs(int n)
 {
-    if(n < 0) {
-        return (-n);
-    } else {
-        return (n);
-    }
+	if(n < 0) {
+		return (-n);
+	} else {
+		return (n);
+	}
 }
 
 /**
@@ -23,13 +23,13 @@ int _abs(int n)
  * Returns: the value of the last digit
  */
 int print_last_digit(int n) {
-    int last_digit;
+	int last_digit;
 
-    last_digit = _abs(n % 10);
+	last_digit = _abs(n % 10);
 
-    _putchar(last_digit + '0'); // Convert the digit to character and print it
+	_putchar(last_digit + '0'); // Convert the digit to character and print it
 
-    return last_digit;
+	return last_digit;
 }
 
 /**
@@ -39,12 +39,12 @@ int print_last_digit(int n) {
  */
 int main(void)
 {
-    int r;
+	int r;
 
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
-    _putchar('0' + r);
-    _putchar('\n');
-    return (0);
+	print_last_digit(98);
+	print_last_digit(0);
+	r = print_last_digit(-1024);
+	_putchar('0' + r);
+	_putchar('\n');
+	return (0);
 }
