@@ -6,9 +6,16 @@
  * @n: The number.
  * Return: true if n is multiple of 3 or 5, false if no.
  */
-bool isMultiple(int n)
+int isMultiple(int n)
 {
-	return (n % 3 == 0) || (n % 5 == 0);
+	if ((n % 3 == 0) || (n % 5 == 0))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	} 
 }
 
 /**
@@ -22,7 +29,7 @@ int main(void)
 
 	for (i = 3; i < 1024; i++)
 	{
-		if (isMultiple(i))
+		if (isMultiple(i) == 1)
 		{
 			sum +=i ;
 		}
