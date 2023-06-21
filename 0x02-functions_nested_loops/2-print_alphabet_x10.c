@@ -8,7 +8,8 @@ void print_alphabet(void)
 {
 	char letter = 'a';
 	
-	while (letter <= 'z') {
+	while (letter <= 'z')
+	{
 		putchar(letter);
 		letter++;
 	}
@@ -21,18 +22,8 @@ void print_alphabet(void)
  */
 void print_alphabet_x10(void)
 {
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++)
+	{
 		print_alphabet()
 	}
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
 }
