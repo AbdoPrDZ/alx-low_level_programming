@@ -4,7 +4,8 @@
 /**
  * times_table - Prints the multiplication table in a specific format
  */
-void times_table(void) {
+void times_table(void)
+{
 	int i, j, increment;
 
 	increment = 0;
@@ -18,15 +19,4 @@ void times_table(void) {
 		printf("%2d$\n", j * increment);
 		increment++;
 	}
-}
-
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	times_table();
-	return (0);
 }
