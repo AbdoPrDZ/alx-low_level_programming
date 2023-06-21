@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_sign - Prints the sign of a number.
+ * _abs - Computes the absolute value of a number.
  * @n: The number.
- * Return: The absolute value of n
+ * Return: The absolute value of n.
  */
 int _abs(int n)
 {
