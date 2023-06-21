@@ -10,8 +10,10 @@ int main(void)
 {
 	int i, first = 1, second = 2, next;
 
-	for (i = 1; i < 49; i++)
-    {
+	printf("%d, %d, ", first, second);
+
+	for (i = 0; i < 49; i++)
+	{
 		next = first + second;
 		printf("%d, ", next);
 		first = second;
