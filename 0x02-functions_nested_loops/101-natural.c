@@ -6,17 +6,17 @@
  * @n: The number.
  * Return: true if n is multiple of 3 or 5, false if no.
  */
-// int isMultiple(int n)
-// {
-// 	if ((n % 3 == 0) || (n % 5 == 0))
-// 	{
-// 		return (1);
-// 	}
-// 	else
-// 	{
-// 		return (0);
-// 	} 
-// }
+int isMultiple(int n)
+{
+	if ((n % 3 == 0) || (n % 5 == 0))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	} 
+}
 
 /**
  * main - check the code.
