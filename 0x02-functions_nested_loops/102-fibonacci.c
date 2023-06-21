@@ -15,7 +15,7 @@ int main(void)
 
 	printf("%u, %u, ", first, second);
 
-	for (i = 0; i < 48; i++)
+	for (i = 1; i < 50; i++)
 	{
 		next = first + second;
 		printf("%u, ", next);
@@ -26,5 +26,5 @@ int main(void)
 	next = first + second;
 	printf("%u\n", next);
 
-	return 0;
+	return (0);
 }
