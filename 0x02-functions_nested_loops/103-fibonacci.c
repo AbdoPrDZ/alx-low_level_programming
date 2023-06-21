@@ -11,7 +11,7 @@ int main(void)
 	int i, first = 1, second = 2, next;
 	int sum = 2;
 
-	for (i = 3; i < 50; i++)
+	for (i = 0; i < 29; i++)
 	{
 		next = first + second;
 		if (next % 2 == 0)
