@@ -17,8 +17,8 @@ int main(void)
 
 	for (i = 3; i < 50; i++)
 	{
-		unsigned next = first + second;
-		printf("%u, ", next);
+		next = first + second;
+		printf("%d, ", next);
 		first = second;
 		second = next;
 	}
