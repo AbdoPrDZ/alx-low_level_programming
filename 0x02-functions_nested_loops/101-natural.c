@@ -15,7 +15,7 @@ int isMultiple(int n)
 	else
 	{
 		return (0);
-	} 
+	}
 }
 
 /**
@@ -31,11 +31,11 @@ int main(void)
 	{
 		if (isMultiple(i) == 1)
 		{
-			sum +=i ;
+			sum += i;
 		}
 	}
 
-	printf("Result: %d\n", sum);
-	
+	printf("%d\n", sum);
+
 	return (0);
 }
