@@ -9,30 +9,30 @@
  */
 int main(void)
 {
-    mpz_t a, b, c;
+    mpz_t first, second, next;
     int i;
 
-    mpz_init(a);
-    mpz_init(b);
-    mpz_init(c);
+    mpz_init(first);
+    mpz_init(second);
+    mpz_init(next);
     
-    mpz_set_ui(a, 0);
-    mpz_set_ui(b, 1);
+    mpz_set_ui(first, 0);
+    mpz_set_ui(second, 1);
 
 	printf("%d, %d, ", first, second);
 
 	for (i = 0; i < 48; i++)
 	{
-        mpz_add(c, a, b);
+        mpz_add(next, first, second);
 		printf("%d, ", next);
-        mpz_set(a, b);
-        mpz_set(b, c);
+        mpz_set(first, second);
+        mpz_set(second, next);
 	}
 	printf("%d\n", first + second);
 
-    mpz_clear(a);
-    mpz_clear(b);
-    mpz_clear(c);
+    mpz_clear(first);
+    mpz_clear(second);
+    mpz_clear(next);
 
 	return (0);
 }
