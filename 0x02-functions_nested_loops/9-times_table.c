@@ -15,7 +15,7 @@ void times_table(void)
 		printf("0, ");
 		for (j = 1; j < 9; j++)
 		{
-			printf("%2d, ", j*increment);
+			printf("%2d, ", j * increment);
 		}
 		printf("%2d\n", j * increment);
 		increment++;
