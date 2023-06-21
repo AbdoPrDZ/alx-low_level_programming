@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <gmp.h>
 
 /**
  * main - check the code.
@@ -8,18 +9,31 @@
  */
 int main(void)
 {
-	int i, first = 1, second = 2, next;
+    mpz_t a, b, c;
+    int i;
+
+    // Initialize variables
+    mpz_init(a);
+    mpz_init(b);
+    mpz_init(c);
+    
+    mpz_set_ui(a, 0);
+    mpz_set_ui(b, 1);
 
 	printf("%d, %d, ", first, second);
 
-	for (i = 0; i < 49; i++)
+	for (i = 0; i < 48; i++)
 	{
-		next = first + second;
+        mpz_add(c, a, b);
 		printf("%d, ", next);
-		first = second;
-		second = next;
+        mpz_set(a, b);
+        mpz_set(b, c);
 	}
 	printf("%d\n", first + second);
+
+    mpz_clear(a);
+    mpz_clear(b);
+    mpz_clear(c);
 
 	return (0);
 }
