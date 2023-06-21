@@ -12,7 +12,6 @@ int main(void)
     mpz_t a, b, c;
     int i;
 
-    // Initialize variables
     mpz_init(a);
     mpz_init(b);
     mpz_init(c);
