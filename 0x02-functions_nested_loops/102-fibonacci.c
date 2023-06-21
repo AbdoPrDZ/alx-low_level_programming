@@ -10,7 +10,7 @@ int main(void)
 {
 	int i, first = 1, second = 2, next;
 
-	for (i = 3; i < 49; i++) {
+	for (i = 1; i < 49; i++) {
 		next = first + second;
 		printf("%d, ", next);
 		first = second;
