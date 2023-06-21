@@ -1,14 +1,10 @@
 /**
- *  print_alphabet - Prints the alphabet in 
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-void print_alphabet(void)
+int main(void)
 {
-	char letter = 'a';
-	
-	while (letter <= 'z') {
-		putchar(letter);
-		letter++;
-	}
-	
-	putchar('\n');
+	print_alphabet();
+	return (0);
 }
