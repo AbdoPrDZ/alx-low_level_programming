@@ -19,16 +19,17 @@ int main(void)
     mpz_set_ui(first, 0);
     mpz_set_ui(second, 1);
 
-	printf("%d, %d, ", first, second);
+	gmp_printf("%d, %d, ", first, second);
 
 	for (i = 0; i < 48; i++)
 	{
         mpz_add(next, first, second);
-		printf("%d, ", next);
+		gmp_printf("%d, ", next);
         mpz_set(first, second);
         mpz_set(second, next);
 	}
-	printf("%d\n", first + second);
+
+	gmp_printf("%d\n", first + second);
 
     mpz_clear(first);
     mpz_clear(second);
