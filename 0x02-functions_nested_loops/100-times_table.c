@@ -11,10 +11,10 @@ void print_times_table(int n)
 
 		increment = 0;
 
-		for (i = 0; i < n; i++)
+		for (i = 0; i <= n; i++)
 		{
 			printf("0, ");
-			for (j = 1; j < n - 1; j++)
+			for (j = 1; j < n; j++)
 			{
 				printf("%4d, ", j * increment);
 			}
