@@ -40,7 +40,15 @@ int main(void)
 	/* print_most_numbers(); */
 
 	/* 5-more_numbers */
-	more_numbers();
+	/* more_numbers(); */
+
+    /* 6-print_line */
+    /*
+    print_line(0);
+    print_line(2);
+    print_line(10);
+    print_line(-4);
+    */
 
 	return (0);
 }
