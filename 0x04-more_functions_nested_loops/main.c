@@ -34,7 +34,7 @@ int main(void)
 	*/
 
 	/* 3-print_numbers */
-	/* print_numbers();*/
+	/* print_numbers(); */
 
 	/* 4-print_most_numbers */
 	/* print_most_numbers(); */
