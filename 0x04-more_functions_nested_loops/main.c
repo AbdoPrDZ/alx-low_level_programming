@@ -52,11 +52,11 @@ int main(void)
 
    	/* 7-print_diagonal.c */
    	/*
-	*/
 	print_diagonal(0);
 	print_diagonal(2);
 	print_diagonal(10);
 	print_diagonal(-4);
+	*/
 
 	/* 8-print_square.c */
 	/*
