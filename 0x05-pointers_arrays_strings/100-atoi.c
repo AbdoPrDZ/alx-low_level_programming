@@ -29,10 +29,8 @@ int _pow(int n, int p)
  */
 int _atoi(char *str)
 {
-	int i, dlen, num, start;
-	int digits[32];
+	int i, num, start;
 
-	dlen = 0;
 	num = 0;
 	start = -1;
 
@@ -43,21 +41,14 @@ int _atoi(char *str)
 			if (start == -1)
 				start = i;
 
-			digits[dlen] = str[i] - '0';
-			dlen++;
+            num = num * 10 + (str[i] - '0');
 		}
 		else if (start != -1)
 			break;
 	}
 
-	for (i = 0; i < dlen; i++)
-	{
-		num += _pow(10, dlen - i - 1) * digits[i];
-	}
-
 	if (start > 0 && str[start - 1] == '-')
 		num = -num;
 
-	
 	return (num);
 }
