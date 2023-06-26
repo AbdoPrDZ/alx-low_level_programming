@@ -5,7 +5,7 @@
  * puts2 - prints a string, followed by a new line, to stdout.
  * @str: The string.
  */
-void puts2(char* str)
+void puts2(char *str)
 {
 	int len, i;
 
