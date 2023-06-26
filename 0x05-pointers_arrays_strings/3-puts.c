@@ -5,7 +5,7 @@
  * _puts - prints a string, followed by a new line, to stdout.
  * @str: The string.
  */
-void _puts(char* str)
+void _puts(char *str)
 {
 	int len, i;
 
