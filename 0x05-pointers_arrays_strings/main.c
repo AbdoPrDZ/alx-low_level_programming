@@ -104,8 +104,6 @@ int main(void)
 
 	/* 100-atoi.c */
 	/*
-	*/
-
 	int nb;
 
 	nb = _atoi("98");
@@ -124,6 +122,7 @@ int main(void)
 	printf("%d\n", nb);
 	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
 	printf("%d\n", nb);
+	*/
 
 	return (0);
 }
