@@ -122,6 +122,10 @@ int main(void)
 	printf("%d\n", nb);
 	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
 	printf("%d\n", nb);
+	nb = _atoi("+++++    +-+    2242454");
+	printf("%d\n", nb);
+	nb = _atoi("-2147483648");
+	printf("%d\n", nb);
 	*/
 
 	return (0);
