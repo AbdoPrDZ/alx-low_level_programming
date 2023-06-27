@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <limits.h>
 
 /**
  * _atoi - convert string to int.
@@ -8,21 +9,26 @@
  */
 int _atoi(char *str)
 {
-	int i, num, start, sign;
+	int i, num, start;
 
 	num = 0;
 	start = -1;
-	sign = 1;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == '-')
-			sign = -1;
-
 		if (str[i] >= '0' && str[i] <= '9')
 		{
 			if (start == -1)
 				start = i;
+
+			if (num > INT_MAX / 10 || (num == INT_MAX / 10 && (str[i] - '0') > INT_MAX % 10))
+			{
+				if (start > 0 && str[start - 1] == '-')
+					return INT_MIN;
+				else
+					return INT_MAX;
+
+			}
 
 			num = num * 10 + (str[i] - '0');
 		}
@@ -30,7 +36,8 @@ int _atoi(char *str)
 			break;
 	}
 
-	num *= sign;
+	if (start > 0 && str[start - 1] == '-')
+		num = -num;
 
 	return (num);
 }
