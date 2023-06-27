@@ -9,9 +9,9 @@
  */
 int _atoi(char *str)
 {
-	int i, num, start;
+	int i, n, start;
 
-	num = 0;
+	n = 0;
 	start = -1;
 
 	for (i = 0; str[i] != '\0'; i++)
@@ -21,23 +21,22 @@ int _atoi(char *str)
 			if (start == -1)
 				start = i;
 
-			if (num > INT_MAX / 10 || (num == INT_MAX / 10 && (str[i] - '0') > INT_MAX % 10))
+			if (n > INT_MAX / 10 || (n == INT_MAX / 10 && str[i] - '0' > INT_MAX % 10))
 			{
 				if (start > 0 && str[start - 1] == '-')
-					return INT_MIN;
+					return (INT_MIN);
 				else
-					return INT_MAX;
-
+					return (INT_MAX);
 			}
 
-			num = num * 10 + (str[i] - '0');
+			n = n * 10 + (str[i] - '0');
 		}
 		else if (start != -1)
 			break;
 	}
 
 	if (start > 0 && str[start - 1] == '-')
-		num = -num;
+		n = -n;
 
-	return (num);
+	return (n);
 }
