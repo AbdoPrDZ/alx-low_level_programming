@@ -5,6 +5,7 @@
  * @s: double pointer to a string.
  * @to: pointer to the string to be assigned.
  */
-void set_string(char** s, char* to) {
+void set_string(char **s, char *to)
+{
 	*s = to;
 }
