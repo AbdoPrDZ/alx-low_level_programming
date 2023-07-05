@@ -3,8 +3,7 @@
 /**
  * sqrt_helper - recursive helper function to find the square.
  * @n: the number to find the square root of.
- * @start: the starting value of the search range.
- * @end: the ending value of the search range.
+ * @guess: the guess number to try it.
  * Return: the square root of n, or -1 if n does not have a natural square.
  */
 int sqrt_helper(int n, int guess)
@@ -25,7 +24,7 @@ int sqrt_helper(int n, int guess)
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-		return (-1);	
+		return (-1);
 	else if (n == 0 || n == 1)
 		return (n);
 
