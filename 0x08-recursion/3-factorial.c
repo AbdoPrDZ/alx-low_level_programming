@@ -12,10 +12,10 @@ int factorial(int n)
 	if (n < 0)
 		return (-1);
 
-	while (n > 0)
+	if (n > 0)
 	{
 		f *= n;
-		n--;
+		f *= factorial(n - 1);
 	}
 
 	return (f);

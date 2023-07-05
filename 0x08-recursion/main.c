@@ -63,17 +63,17 @@ int main(void)
 	int r;
 
 	r = _sqrt_recursion(1);
-	printf("%d\n", r);
+	printf("sqrt(1) = %d\n", r);
 	r = _sqrt_recursion(1024);
-	printf("%d\n", r);
+	printf("sqrt(1024) = %d\n", r);
 	r = _sqrt_recursion(16);
-	printf("%d\n", r);
+	printf("sqrt(16) = %d\n", r);
 	r = _sqrt_recursion(17);
-	printf("%d\n", r);
+	printf("sqrt(17) = %d\n", r);
 	r = _sqrt_recursion(25);
-	printf("%d\n", r);
+	printf("sqrt(25) = %d\n", r);
 	r = _sqrt_recursion(-1);
-	printf("%d\n", r);
+	printf("sqrt(-1) = %d\n", r);
 	*/
 
 	/* 6-main.c */
