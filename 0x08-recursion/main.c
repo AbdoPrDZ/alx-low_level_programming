@@ -98,5 +98,49 @@ int main(void)
 	printf("%d\n", r);
 	*/
 
+	/* 100-main.c */
+	/*
+	int r;
+
+	r = is_palindrome("level");
+	printf("level = %d\n", r);
+	r = is_palindrome("redder");
+	printf("redder = %d\n", r);
+	r = is_palindrome("test");
+	printf("test = %d\n", r);
+	r = is_palindrome("step on no pets");
+	printf("step on no pets = %d\n", r);
+	*/
+
+	/* 101-main.c */
+	/*
+	int r;
+
+	r = wildcmp("main.c", "*.c");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "m*a*i*n*.*c*");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "main.c");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "m*c");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "ma********************************c");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "*");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "***");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "m.*c");
+	printf("%d\n", r);
+	r = wildcmp("main.c", "**.*c");
+	printf("%d\n", r);
+	r = wildcmp("main-main.c", "ma*in.c");
+	printf("%d\n", r);
+	r = wildcmp("main", "main*d");
+	printf("%d\n", r);
+	r = wildcmp("abc", "*b");
+	printf("%d\n", r);
+	*/
+
 	return (0);
 }
