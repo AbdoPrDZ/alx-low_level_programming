@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_helper - recursive helper function to check if a number is prime.
+ * is_prime_number_helper - recursive helper function to check if a number is prime.
  * @n: the number to be checked.
  * @i: the current divisor.
  *
