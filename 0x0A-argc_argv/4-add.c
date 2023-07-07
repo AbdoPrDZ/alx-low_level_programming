@@ -3,7 +3,9 @@
 #include <ctype.h>
 
 /**
- * main - check the code.
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: arguments
  * Return: 0 if success 1 if has error.
  */
 int main(int argc, char *argv[])

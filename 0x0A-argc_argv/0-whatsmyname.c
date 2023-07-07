@@ -2,6 +2,8 @@
 
 /**
  * main - prints its name.
+ * @argc: argument count
+ * @argv: arguments
  * Return: Always 0.
  */
 int main(int argc, char *argv[])

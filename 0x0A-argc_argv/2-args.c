@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code.
+ * main - prints all arguments it receives.
+ * @argc: argument count
+ * @argv: arguments
  * Return: Always 0.
  */
 int main(int argc, char *argv[])

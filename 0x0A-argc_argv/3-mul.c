@@ -2,7 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code.
+ * main - print the result of the multiplication.
+ * @argc: argument count
+ * @argv: arguments
  * Return: 0 if success 1 if has error.
  */
 int main(int argc, char *argv[])
