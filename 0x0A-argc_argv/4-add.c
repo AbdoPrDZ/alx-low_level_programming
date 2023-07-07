@@ -17,13 +17,16 @@ int main(int argc, char *argv[])
 		char *arg = argv[i];
 		int j = 0;
 
-		while (arg[j] != '\0') {
-			if (!isdigit(arg[j])) {
+		while (arg[j] != '\0')
+		{
+			if (!isdigit(arg[j]))
+			{
 				printf("Error\n");
+
 				return (1);
 			}
 			j++;
-        }
+		}
 
 		sum += atoi(argv[i]);
 	}
