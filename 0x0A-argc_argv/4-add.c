@@ -4,7 +4,7 @@
 
 /**
  * main - check the code.
- * Return: Always 0.
+ * Return: 0 if success 1 if has error.
  */
 int main(int argc, char *argv[])
 {
