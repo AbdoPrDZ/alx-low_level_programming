@@ -7,10 +7,8 @@
  */
 int main(void)
 {
-    /* main.c */
-    /*
-    */
-    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	/* main.c */
+	_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
 
-    return (0);
+	return (0);
 }
