@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - print the result of the multiplication.
@@ -9,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	int i, sum = 1;
 
 	if (argc != 3)
 	{
@@ -18,10 +19,24 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	for (i = 1; i < argc; i++)
+	{
+		char *arg = argv[i];
+		int j = 0;
 
-	printf("%d\n", num1 * num2);
+		while (arg[j] != '\0') {
+			if (arg[j] != '-' && !isdigit(arg[j])) {
+				printf("Error\n");
+
+				return (1);
+			}
+			j++;
+        }
+
+		sum *= atoi(argv[i]);
+	}
+
+	printf("%d\n", sum);
 
 	return (0);
 }
