@@ -14,36 +14,14 @@ char *getWord(char *s, int start, int end)
 
 	char *w;
 
-	w = malloc((end - start) * sizeof(char));
+	w = malloc((end - start + 1) * sizeof(char));
 
 	for (i = 0; start < end; start++, i++)
 		w[i] = s[start];
 
+	w[i] = '\0';
+
 	return (w);
-}
-/**
- * count_words - counting the string words
- * @str: the string.
- * Return: words count.
- */
-int count_words(char *str)
-{
-	int i, s = -1, e = -1, wc = 0;
-
-	for (i = 0; i < (int) strlen(str); i++)
-	{
-		if (str[i] != ' ' && s < 0)
-			s = i;
-		else if ((str[i] == ' ' || str[i] == '\t' || str[i] == '\n') && s >= 0)
-			e = i;
-		else if (str[i + 1] == '\0' && s >= 0)
-			e = i + 1;
-
-		if (s >= 0 && e > 0)
-			wc++;
-	}
-
-	return (wc);
 }
 
 /**
@@ -53,19 +31,14 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int i, wi = 0, wc, s = -1, e = -1;
+	int i, wCount = 0, s = -1, e = -1;
 
 	char **words;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	wc = count_words(str);
-
-	if (wc == 0)
-		return (NULL);
-
-	words = malloc(wc * sizeof(char *));
+	words = malloc(4 * sizeof(int *));
 
 	if (str[0] != ' ')
 		s = 0;
@@ -83,12 +56,19 @@ char **strtow(char *str)
 		{
 			char *word = getWord(str, s, e);
 
-			words[wi] = word;
-			wi++;
+			words = realloc(words, (wCount + 1) * sizeof(char *));
+			words[wCount] = word;
+			wCount++;
 			s = -1;
 			e = -1;
 		}
 	}
+
+	if (wCount == 0)
+		return (NULL);
+
+	words = realloc(words, (wCount + 1) * sizeof(char *));
+	words[wCount] = NULL;
 
 	return (words);
 }
