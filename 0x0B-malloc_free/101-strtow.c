@@ -23,7 +23,11 @@ char *getWord(char *s, int start, int end)
 
 	return (w);
 }
-
+/**
+ * count_words - counting the string words
+ * @str: the string.
+ * Return: words count.
+ */
 int count_words(char *str)
 {
 	int i, s = -1, e = -1, wc = 0;
@@ -51,14 +55,13 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int i, wCount = 0, wc, s = -1, e = -1;
+	int i, wi = 0, wc, s = -1, e = -1;
 
 	char **words;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	/*words = malloc(1 * sizeof(char *));*/
 	wc = count_words(str);
 
 	if (wc == 0)
@@ -82,21 +85,14 @@ char **strtow(char *str)
 		{
 			char *word = getWord(str, s, e);
 
-			/*words = realloc(words, (wCount + 1) * sizeof(char *));*/
-			words[wCount] = word;
-			wCount++;
+			words[wi] = word;
+			wi++;
 			s = -1;
 			e = -1;
 		}
 	}
 
-	/*
-	if (wCount == 0)
-		return (NULL);
-
-	words = realloc(words, (wCount + 1) * sizeof(char *));
-	*/
-	words[wCount] = NULL;
+	words[wi] = NULL;
 
 	return (words);
 }
