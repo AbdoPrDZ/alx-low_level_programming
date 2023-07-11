@@ -9,12 +9,16 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	long int size1, size2, size, i, j;
+	long int size1 = 0, size2 = 0, size, i, j;
 
 	char *s;
 
-	size1 = strlen(s1);
-	size2 = strlen(s2);
+	if (s1)
+		size1 = strlen(s1);
+
+	if (s2)
+		size2 = strlen(s2);
+
 	size = size1 + size2 + 1;
 
 	s = malloc(sizeof(char) * size);
