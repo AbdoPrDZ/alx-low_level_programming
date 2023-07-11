@@ -45,8 +45,10 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && s < 0)
 			s = i;
-		if ((str[i] == ' ' && s >= 0) || ((i == (int) strlen(str)) && s >= 0))
+		else if ((str[i] == ' ' && s >= 0))
 			e = i;
+		else if (str[i + 1] == '\0' && s >= 0)
+			e = i + 1;
 
 		if (s >= 0 && e > 0)
 		{
