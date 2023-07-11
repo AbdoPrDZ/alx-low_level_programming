@@ -14,12 +14,10 @@ char *getWord(char *s, int start, int end)
 
 	char *w;
 
-	w = malloc((end - start + 1) * sizeof(char));
+	w = malloc((end - start) * sizeof(char));
 
 	for (i = 0; start < end; start++, i++)
 		w[i] = s[start];
-
-	w[i] = '\0';
 
 	return (w);
 }
@@ -67,7 +65,7 @@ char **strtow(char *str)
 	if (wc == 0)
 		return (NULL);
 
-	words = malloc((wc + 1) * sizeof(char *));
+	words = malloc(wc * sizeof(char *));
 
 	if (str[0] != ' ')
 		s = 0;
@@ -91,8 +89,6 @@ char **strtow(char *str)
 			e = -1;
 		}
 	}
-
-	words[wi] = NULL;
 
 	return (words);
 }
