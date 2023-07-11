@@ -14,7 +14,7 @@ char *getWord(char *s, int start, int end)
 
 	char *w;
 
-	w = malloc((end - start) * sizeof(char));
+	w = malloc((end - start + 1) * sizeof(char));
 
 	for (i = 0; start < end; start++, i++)
 		w[i] = s[start];
