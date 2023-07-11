@@ -17,16 +17,18 @@ char *str_concat(char *s1, char *s2)
 	if (size == 0)
 		return (NULL);
 
-	s = malloc(sizeof(char) * size);
+	s = malloc(sizeof(char) * (size + 1));
 
 	if (s == NULL)
 		return (NULL);
 
-	for (i = 0; i <= size; i++)
+	for (i = 0; i < size; i++)
 		if (i < strlen(s1))
 			s[i] = s1[i];
 		else
 			s[i] = s2[i - strlen(s1)];
+
+	s[i] = '\0';
 
 	return (s);
 }
