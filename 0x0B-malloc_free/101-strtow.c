@@ -62,6 +62,9 @@ char **strtow(char *str)
 		}
 	}
 
+	if (wCount == 0)
+		return (NULL);
+
 	words = realloc(words, (wCount + 1) * sizeof(char *));
 	words[wCount] = NULL;
 
