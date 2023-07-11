@@ -19,6 +19,8 @@ char *getWord(char *s, int start, int end)
 	for (i = 0; start < end; start++, i++)
 		w[i] = s[start];
 
+	w[i] == '\0';
+
 	return (w);
 }
 
