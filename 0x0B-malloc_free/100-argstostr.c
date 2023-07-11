@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	if (ac - 1 == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 		sCount += strlen(av[i]) + 1;
 
 	s = malloc(sizeof(char) * sCount);
@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	if (s == NULL)
 		return (NULL);
 
-	for (i = 1, p = 0; i < ac; i++)
+	for (i = 0, p = 0; i < ac; i++)
 	{
 		for (j = 0; j < (long int) strlen(av[i]); j++, p++)
 			s[p] = av[i][j];
