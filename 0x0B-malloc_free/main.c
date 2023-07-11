@@ -119,6 +119,7 @@ int main(void)
 
 	/* 4-main.c */
 	/*
+	*/
 	int **grid;
 
 	grid = alloc_grid(6, 4);
@@ -131,7 +132,6 @@ int main(void)
 	grid[3][4] = 402;
 	print_grid(grid, 6, 4);
 	free_grid(grid, 4);
-	*/
 
 	return (0);
 }
