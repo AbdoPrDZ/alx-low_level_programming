@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * func - allocates memory for an array, using malloc.
+ * _calloc - allocates memory for an array, using malloc.
  * @nmemb: elements number
  * @size: bytes size.
  * Return: allocated memory.
