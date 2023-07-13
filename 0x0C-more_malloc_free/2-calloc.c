@@ -2,8 +2,8 @@
 
 /**
  * func - allocates memory for an array, using malloc.
- * @nmemb: nmemb number
- * @size: element size.
+ * @nmemb: elements number
+ * @size: bytes size.
  * Return: allocated memory.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
