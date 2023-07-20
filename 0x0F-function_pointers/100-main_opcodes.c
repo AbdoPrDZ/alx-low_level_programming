@@ -28,7 +28,11 @@ int main(int argc, char *argv[])
 	code = (unsigned char *)main;
 
 	for (i = 0; i < num_bytes; i++)
+	{
 		printf("%02x ", code[i]);
+		if (num_bytes > count)
+			printf(" ");
+	}
 
 	printf("\n");
 
