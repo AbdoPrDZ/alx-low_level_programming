@@ -39,17 +39,6 @@ void printString(va_list args)
 }
 
 /**
- * struct tp - Struct tp
- * @tpc: The type code
- * @printer: The printer function
- */
-typedef struct tp
-{
-	char *tpc;
-	void (*printer)(va_list args);
-} tp_t;
-
-/**
  * print_all - prints anything.
  * @format: format of arguments.
  */
