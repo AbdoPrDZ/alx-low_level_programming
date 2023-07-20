@@ -34,12 +34,13 @@ void printFloat(va_list args)
 void printString(va_list args)
 {
 	char *s = va_arg(args, char*);
+
 	printf("%s", (s != NULL) ? s : "(nil)");
 }
 
 /**
  * print_all - prints anything.
- * Return: Always 0.
+ * @format: format of arguments.
  */
 void print_all(const char * const format, ...)
 {
@@ -53,7 +54,7 @@ void print_all(const char * const format, ...)
 
 	int i = 0, j = 0;
 
-  	va_list args;
+	va_list args;
 
 	va_start(args, format);
 

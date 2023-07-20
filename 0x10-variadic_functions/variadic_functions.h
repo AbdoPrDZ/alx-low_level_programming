@@ -6,13 +6,12 @@
 
 /**
  * struct tp - Struct tp
- *
  * @tpc: The type code
- * @f: The printer function
+ * @printer: The printer function
  */
 typedef struct tp
 {
-	char* tpc;
+	char *tpc;
 	void (*printer)(va_list args);
 } tp_t;
 
