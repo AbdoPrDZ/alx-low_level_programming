@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
+		return (1);
 	}
 
 	num1 = atoi(argv[1]);
@@ -26,12 +27,13 @@ int main(int argc, char *argv[])
 	opf = get_op_func(opn);
 
 	if (opf != NULL)
-		printf("%d\n", opf(num1, num2));
-	else
 	{
-		printf("Error\n");
-		exit(99);
+		printf("%d\n", opf(num1, num2));
+		return (0);
 	}
 
-	return (0);
+	printf("Error\n");
+	exit(99);
+
+	return (1);
 }
