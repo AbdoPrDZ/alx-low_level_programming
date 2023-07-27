@@ -12,7 +12,7 @@
 typedef struct tp
 {
 	char *tpc;
-	void (*printer)(va_list args);
+	int (*printer)(va_list args);
 } tp_t;
 
 int sum_them_all(const unsigned int n, ...);
