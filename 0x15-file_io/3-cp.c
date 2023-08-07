@@ -49,10 +49,10 @@ int main(int argc, char *argv[])
 		print_error("Error: Can't read from file %s", argv[1]);
 
 	if (close(fd_from) == -1)
-		print_error("Error: Can't close fd %d", fd_from);
+		print_error("Error: Can't close fd %d", argv[1]);
 
 	if (close(fd_to) == -1)
-		print_error("Error: Can't close fd %d", fd_to);
+		print_error("Error: Can't close fd %d", argv[2]);
 
 	return (0);
 }
