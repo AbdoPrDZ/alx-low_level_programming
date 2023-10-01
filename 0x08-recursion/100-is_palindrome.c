@@ -2,11 +2,11 @@
 #include <string.h>
 
 /**
- * is_palindrome_helper - Recursive helper function.
- * @s: The string to be checked.
- * @start: The starting index.
- * @end: The ending index.
- * Return: 1 if the string is a palindrome, 0 otherwise.
+ * is_palindrome_helper - Recursive helper function
+ * @s: The string to be checked
+ * @start: The starting index
+ * @end: The ending index
+ * Return: 1 if the string is a palindrome, 0 otherwise
  */
 int is_palindrome_helper(char *s, int start, int end)
 {
@@ -19,9 +19,9 @@ int is_palindrome_helper(char *s, int start, int end)
 }
 
 /**
- * is_palindrome - checks if a string is a palindrome.
- * @s: the string to be checked.
- * Return: 1 if the string is a palindrome, 0 otherwise.
+ * is_palindrome - checks if a string is a palindrome
+ * @s: the string to be checked
+ * Return: 1 if the string is a palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
 {

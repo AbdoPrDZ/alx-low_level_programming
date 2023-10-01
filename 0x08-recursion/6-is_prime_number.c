@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * is_prime_number_helper - recursive helper function.
- * @n: the number to be checked.
- * @i: the current divisor.
- *
- * Return: 1 if the number is prime, 0 otherwise.
+ * is_prime_number_helper - recursive helper function
+ * @n: the number to be checked
+ * @i: the current divisor
+ * Return: 1 if the number is prime, 0 otherwise
  */
 int is_prime_number_helper(int n, int i)
 {

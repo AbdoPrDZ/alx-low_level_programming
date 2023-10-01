@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * sqrt_helper - recursive helper function to find the square.
- * @n: the number to find the square root of.
- * @guess: the guess number to try it.
- * Return: the square root of n, or -1 if n does not have a natural square.
+ * sqrt_helper - recursive helper function to find the square
+ * @n: the number to find the square root of
+ * @guess: the guess number to try it
+ * Return: the square root of n, or -1 if n does not have a natural square
  */
 int sqrt_helper(int n, int guess)
 {
@@ -17,9 +17,9 @@ int sqrt_helper(int n, int guess)
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- * @n: the number to find the square root of.
- * Return: the square root of n, or -1 if n does not have a natural square.
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number to find the square root of
+ * Return: the square root of n, or -1 if n does not have a natural square
  */
 int _sqrt_recursion(int n)
 {
