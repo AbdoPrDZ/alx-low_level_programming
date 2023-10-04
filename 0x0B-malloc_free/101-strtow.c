@@ -11,10 +11,11 @@
 char *getWord(char *s, int start, int end)
 {
 	int i;
-
 	char *w;
 
 	w = malloc((end - start + 1) * sizeof(char));
+	if (w == NULL)
+		return (NULL);
 
 	for (i = 0; start < end; start++, i++)
 		w[i] = s[start];
@@ -32,35 +33,34 @@ char *getWord(char *s, int start, int end)
 char **strtow(char *str)
 {
 	int i, wCount = 0, s = -1, e = -1;
-
 	char **words;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	words = malloc(4 * sizeof(int *));
+	words = malloc(1 * sizeof(char *));
+	if (words == NULL)
+	    return (NULL);
 
-	if (str[0] != ' ')
+	if (str[0] != ' ' && str[0] != '\t' && str[0] != '\n')
 		s = 0;
 
 	for (i = 0; i < (int) strlen(str); i++)
 	{
-		if (str[i] != ' ' && s < 0)
+		if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && s < 0)
 			s = i;
-		else if ((str[i] == ' ' && s >= 0))
+		else if (str[i] == ' ' && str[i] != '\t' && str[i] != '\n' && s >= 0)
 			e = i;
 		else if (str[i + 1] == '\0' && s >= 0)
 			e = i + 1;
 
 		if (s >= 0 && e > 0)
 		{
-			char *word = getWord(str, s, e);
-
-			words = realloc(words, (wCount + 1) * sizeof(char *));
-			words[wCount] = word;
-			wCount++;
-			s = -1;
-			e = -1;
+			words = realloc(words, (wCount + 2) * sizeof(char *));
+			if (words == NULL)
+				return (NULL);
+			words[wCount] = getWord(str, s, e);
+			wCount++, s = -1, e = -1;
 		}
 	}
 
@@ -68,6 +68,8 @@ char **strtow(char *str)
 		return (NULL);
 
 	words = realloc(words, (wCount + 1) * sizeof(char *));
+	if (words == NULL)
+		return (NULL);
 	words[wCount] = NULL;
 
 	return (words);
