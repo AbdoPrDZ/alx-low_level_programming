@@ -7,9 +7,9 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	int i, j, len = 0, loop = 0;
-	const listint_t *node = head;
-	void *add, **adds;
+	int i, j, len = 0;
+	const listint_t *node = head, *loop_node = NULL;
+	void **adds;
 
 	adds = malloc(sizeof(void *));
 	if (adds == NULL)
@@ -17,25 +17,27 @@ size_t print_listint_safe(const listint_t *head)
 
 	for (i = 0; node != NULL; i++, len++)
 	{
-		add = (void *)node;
 		for (j = 0; j < i; j++)
-			if (add == adds[j])
+			if ((void *)node == adds[j])
 			{
-				loop = 1;
+				loop_node = node;
 				break;
 			}
-		if (loop == 1)
+		if (loop_node != NULL)
 			break;
 		adds = realloc(adds, sizeof(void *) * (len + 1));
 		if (adds == NULL)
 			break;
-		adds[i] = add;
+		adds[i] = (void *)node;
 		node = node->next;
 	}
 	free(adds);
 
 	for (i = 0; i < len; i++, head = head->next)
 		printf("[%p] %d\n", (void *)head, head->n);
+
+	if (loop_node != NULL)
+		printf("-> [%p] %d\n", (void *)loop_node, loop_node->n);
 
 	return (len);
 }

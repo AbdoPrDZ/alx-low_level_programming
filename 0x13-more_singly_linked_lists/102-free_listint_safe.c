@@ -7,9 +7,9 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	int i, j, len = 0, loop = 0;
-	listint_t *node = *h;
-	void *add, **adds;
+	int i, j, len = 0;
+	listint_t *node = *h, *loop_node = NULL;
+	void **adds;
 
 	adds = malloc(sizeof(void *));
 	if (adds == NULL)
@@ -17,19 +17,18 @@ size_t free_listint_safe(listint_t **h)
 
 	for (i = 0; node != NULL; i++, len++)
 	{
-		add = (void *)node;
 		for (j = 0; j < i; j++)
-			if (add == adds[j])
+			if ((void *)node == adds[j])
 			{
-				loop = 1;
+				loop_node = node;
 				break;
 			}
-		if (loop == 1)
+		if (loop_node != NULL)
 			break;
 		adds = realloc(adds, sizeof(void *) * (len + 1));
 		if (adds == NULL)
 			break;
-		adds[i] = add;
+		adds[i] = (void *)node;
 		node = node->next;
 	}
 	free(adds);

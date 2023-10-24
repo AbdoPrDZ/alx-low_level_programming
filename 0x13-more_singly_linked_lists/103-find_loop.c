@@ -9,7 +9,7 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	int i, j, len = 0;
 	listint_t *node = head;
-	void *add, **adds;
+	void **adds;
 
 	adds = malloc(sizeof(void *));
 	if (adds == NULL)
@@ -17,14 +17,13 @@ listint_t *find_listint_loop(listint_t *head)
 
 	for (i = 0; node != NULL; i++, len++)
 	{
-		add = (void *)node;
 		for (j = 0; j < i; j++)
-			if (add == adds[j])
+			if ((void *)node == adds[j])
 				return (node);
 		adds = realloc(adds, sizeof(void *) * (len + 1));
 		if (adds == NULL)
 			break;
-		adds[i] = add;
+		adds[i] = (void *)node;
 		node = node->next;
 	}
 	free(adds);
