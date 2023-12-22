@@ -4,7 +4,7 @@
 
 /**
  * hash_table_set - adds an element to the hash table
- * @ht! the hash table
+ * @ht: the hash table
  * @key: the key
  * @value: he value associated with the key
  * Return: 1 if it succeeded, 0 otherwise
